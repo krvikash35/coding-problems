@@ -27,7 +27,10 @@ public class ParkingSlot implements Comparable<ParkingSlot> {
 
     @Override
     public int compareTo(ParkingSlot o) {
-        return this.slotNumber - o.slotNumber;
+        if (this.floorNumber == o.floorNumber) {
+            return this.slotNumber - o.slotNumber;
+        }
+        return this.floorNumber - o.floorNumber;
     }
 
 }

@@ -1,0 +1,5 @@
+create_parking_lot id1 3 4
+park_vehicle CAR CAR1 blue
+park_vehicle TRUCK TRUCK1 blue
+park_vehicle BIKE BIKE1 blue
+park_vehicle TRUCK TRUCK2 red

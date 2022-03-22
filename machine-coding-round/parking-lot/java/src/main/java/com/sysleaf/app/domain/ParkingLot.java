@@ -1,6 +1,7 @@
 package com.sysleaf.app.domain;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.NoSuchElementException;
 import java.util.SortedSet;
 import java.util.TreeSet;
@@ -38,7 +39,6 @@ public class ParkingLot {
                 this.availableSlot.add(slot);
             }
         }
-
     }
 
     public Ticket park(Vehicle vehicle) {
@@ -66,9 +66,9 @@ public class ParkingLot {
     public boolean isFull(VehicleType vehicleType) {
         try {
             this.getAvailableSlot(vehicleType);
-            return true;
-        } catch (Exception e) {
             return false;
+        } catch (Exception e) {
+            return true;
         }
     }
 

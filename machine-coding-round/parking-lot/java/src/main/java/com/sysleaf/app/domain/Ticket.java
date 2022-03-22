@@ -12,4 +12,8 @@ public class Ticket {
         this.slotNumber = slotNumber;
         this.id = parkingLotId + "_" + floorNumber + "_" + slotNumber;
     }
+
+    public String getId() {
+        return id;
+    }
 }
