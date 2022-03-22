@@ -4,10 +4,12 @@ public class Ticket {
     String parkingLotId;
     int floorNumber;
     int slotNumber;
+    String id;
 
-    Ticket(String parkingLotId, int floorNumber, int slotNumber) {
+    public Ticket(String parkingLotId, int floorNumber, int slotNumber) {
         this.parkingLotId = parkingLotId;
         this.floorNumber = floorNumber;
         this.slotNumber = slotNumber;
+        this.id = parkingLotId + "_" + floorNumber + "_" + slotNumber;
     }
 }

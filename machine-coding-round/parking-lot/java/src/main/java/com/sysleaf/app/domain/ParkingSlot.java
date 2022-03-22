@@ -1,14 +1,14 @@
 package com.sysleaf.app.domain;
 
-public class ParkingSlot {
+public class ParkingSlot implements Comparable<ParkingSlot> {
     VehicleType vechicleType;
-    int id;
+    int slotNumber;
     int floorNumber;
     Vehicle vehicle;
 
-    public ParkingSlot(VehicleType vehicleType, int id, int floorNumber) {
+    public ParkingSlot(VehicleType vehicleType, int slotNumber, int floorNumber) {
         this.vechicleType = vehicleType;
-        this.id = id;
+        this.slotNumber = slotNumber;
         this.floorNumber = floorNumber;
         this.vehicle = null;
     }
@@ -23,6 +23,11 @@ public class ParkingSlot {
 
     public boolean isOccupied() {
         return this.vehicle != null;
+    }
+
+    @Override
+    public int compareTo(ParkingSlot o) {
+        return this.slotNumber - o.slotNumber;
     }
 
 }

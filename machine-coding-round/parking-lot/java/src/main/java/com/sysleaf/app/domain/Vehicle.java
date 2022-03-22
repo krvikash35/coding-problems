@@ -5,7 +5,7 @@ public class Vehicle {
     private String color;
     private VehicleType type;
 
-    Vehicle(String registrationNumber, String color, VehicleType type) {
+    public Vehicle(String registrationNumber, String color, VehicleType type) {
         this.registrationNumber = registrationNumber;
         this.color = color;
         this.type = type;

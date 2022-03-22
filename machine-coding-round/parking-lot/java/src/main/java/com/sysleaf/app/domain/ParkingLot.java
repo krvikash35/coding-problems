@@ -17,7 +17,7 @@ public class ParkingLot {
     SortedSet<ParkingSlot> availableSlot = new TreeSet<>();
     Set<ParkingSlot> occupiedSlots = new HashSet<>();
 
-    ParkingLot(String id, int numberOfFloor, int numberOfSlotPerFloor) {
+    public ParkingLot(String id, int numberOfFloor, int numberOfSlotPerFloor) {
         this.id = id;
         this.numberOfFloor = numberOfFloor;
         this.numberOfSlotPerFloor = numberOfSlotPerFloor;
@@ -50,7 +50,7 @@ public class ParkingLot {
         slot.Park(vehicle);
         this.availableSlot.remove(slot);
         this.occupiedSlots.add(slot);
-        return new Ticket()
+        return new Ticket(this.id, slot.floorNumber, slot.slotNumber);
     }
 
     public void unPark(String ticketId) {
